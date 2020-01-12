@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+    <div class="left">
+        <a class="hometab" href="{% url 'index' %}">our parea</a>
+    </div>
+    <div class="right">
+        <ul>
+            <li class="nav"><a class="navtab" href="{% url 'food' %}">Food</a></li>
+            <li class="nav"> | </li>
+            <li class="nav"><a class="navtab" href="{% url 'culture' %}">Culture</a></li>
+            <li class="nav"> | </li>
+            <li class="nav"><a class="navtab" href="{% url 'index' %}">Topic</a></li>
+            <li class="nav"> | </li>
+            <li class="nav"><a class="navtab" href="{% url 'index' %}">Topic</a></li>
+        </ul>
+        <br/>
+    </div>
+
+    <br/>
+    <div class="bodypad">
+        {% block body_block %}
+        {% endblock %}
+    </div>
+
+
+</body>
+</html>
